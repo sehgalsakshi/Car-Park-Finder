@@ -1,0 +1,454 @@
+{
+	"info": {
+		"_postman_id": "e0bcdbde-42ef-42dc-bab7-52746c879b88",
+		"name": "car-finder-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Convert Coordinates from SVY21ToWGS84",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/coordinateConversion/SVY21ToWGS84?latitude=28983.788791079794&longitude=33554.5098132845",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"coordinateConversion",
+						"SVY21ToWGS84"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "28983.788791079794"
+						},
+						{
+							"key": "longitude",
+							"value": "33554.5098132845"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Convert Coordinates from SVY21ToWGS84",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/coordinateConversion/SVY21ToWGS84?latitude=28983.788791079794&longitude=33554.5098132845",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"coordinateConversion",
+								"SVY21ToWGS84"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "28983.788791079794"
+								},
+								{
+									"key": "longitude",
+									"value": "33554.5098132845"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 14 Apr 2022 11:16:08 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"latitude\": 1.3197295716669164,\n    \"longitude\": 103.84215843333567\n}"
+				}
+			]
+		},
+		{
+			"name": "Convert Coordinates from WGS84ToSVY21",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/coordinateConversion/WGS84ToSVY21?latitude=1.3197295716669164&longitude=103.84215843333567",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"coordinateConversion",
+						"WGS84ToSVY21"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "1.3197295716669164"
+						},
+						{
+							"key": "longitude",
+							"value": "103.84215843333567"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Convert Coordinates from WGS84ToSVY21",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/coordinateConversion/WGS84ToSVY21?latitude=1.3197295716669164&longitude=103.84215843333567",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"coordinateConversion",
+								"WGS84ToSVY21"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "1.3197295716669164"
+								},
+								{
+									"key": "longitude",
+									"value": "103.84215843333567"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 14 Apr 2022 11:15:15 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"x\": 28983.78879107996,\n    \"y\": 33554.5098132845\n}"
+				}
+			]
+		},
+		{
+			"name": "Find all available parkings sorted by distance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/CarParkInfo/findAllAvailableParkings?latitude=28983.788791079794&longitude=33554.5098132845&page=1&perPage=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"CarParkInfo",
+						"findAllAvailableParkings"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "28983.788791079794"
+						},
+						{
+							"key": "longitude",
+							"value": "33554.5098132845"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "perPage",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Find all available parkings sorted by date",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/CarParkInfo/findAllAvailableParkings?latitude=28983.788791079794&longitude=33554.5098132845&page=1&perPage=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"CarParkInfo",
+								"findAllAvailableParkings"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "28983.788791079794"
+								},
+								{
+									"key": "longitude",
+									"value": "33554.5098132845"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "perPage",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 14 Apr 2022 11:15:42 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"KJM1\",\n        \"latitude\": 1.3160936666077356,\n        \"longitude\": 103.84879589885311,\n        \"totalLots\": 265,\n        \"lotsAvailable\": 180,\n        \"distance\": 0.84\n    },\n    {\n        \"id\": \"BR9\",\n        \"latitude\": 1.3189625696233318,\n        \"longitude\": 103.85074308712241,\n        \"totalLots\": 50,\n        \"lotsAvailable\": 22,\n        \"distance\": 0.96\n    },\n    {\n        \"id\": \"AH1\",\n        \"latitude\": 1.3282834951094042,\n        \"longitude\": 103.84461988914597,\n        \"totalLots\": 278,\n        \"lotsAvailable\": 147,\n        \"distance\": 0.99\n    },\n    {\n        \"id\": \"KJ3\",\n        \"latitude\": 1.3144266158666138,\n        \"longitude\": 103.84993059473969,\n        \"totalLots\": 334,\n        \"lotsAvailable\": 51,\n        \"distance\": 1.05\n    },\n    {\n        \"id\": \"KJ4\",\n        \"latitude\": 1.3165869079469947,\n        \"longitude\": 103.8514701851814,\n        \"totalLots\": 182,\n        \"lotsAvailable\": 59,\n        \"distance\": 1.09\n    },\n    {\n        \"id\": \"KJ2\",\n        \"latitude\": 1.3132506545207223,\n        \"longitude\": 103.85067994596479,\n        \"totalLots\": 100,\n        \"lotsAvailable\": 50,\n        \"distance\": 1.19\n    },\n    {\n        \"id\": \"TPMD\",\n        \"latitude\": 1.3302080747111147,\n        \"longitude\": 103.84491120787689,\n        \"totalLots\": 145,\n        \"lotsAvailable\": 113,\n        \"distance\": 1.2\n    },\n    {\n        \"id\": \"TPM3\",\n        \"latitude\": 1.3307490035221916,\n        \"longitude\": 103.84223393404972,\n        \"totalLots\": 370,\n        \"lotsAvailable\": 289,\n        \"distance\": 1.23\n    },\n    {\n        \"id\": \"WDB1\",\n        \"latitude\": 1.3207700328410228,\n        \"longitude\": 103.8532442121171,\n        \"totalLots\": 75,\n        \"lotsAvailable\": 35,\n        \"distance\": 1.24\n    },\n    {\n        \"id\": \"TP20\",\n        \"latitude\": 1.3310224198845166,\n        \"longitude\": 103.84448757302648,\n        \"totalLots\": 90,\n        \"lotsAvailable\": 35,\n        \"distance\": 1.28\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Update Car Park Availability",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/CarParkInfo/updateCarParkAvailability",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"CarParkInfo",
+						"updateCarParkAvailability"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Car Park Availability",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/CarParkInfo/updateCarParkAvailability",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"CarParkInfo",
+								"updateCarParkAvailability"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 14 Apr 2022 10:17:01 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Car park availability updated sucessfully."
+				}
+			]
+		},
+		{
+			"name": "Upload Info Using CSV",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Sakshi S/Data/wego/hdb-carpark-information - Copy.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8082/csv/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"csv",
+						"upload"
+					],
+					"query": [
+						{
+							"key": "file",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Upload Info Using CSV",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Sakshi S/Data/wego/hdb-carpark-information - Copy.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8082/csv/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"csv",
+								"upload"
+							],
+							"query": [
+								{
+									"key": "file",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "66"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 14 Apr 2022 11:04:36 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Uploaded the file successfully: hdb-carpark-information - Copy.csv"
+				}
+			]
+		}
+	]
+}
