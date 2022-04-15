@@ -14,6 +14,8 @@ import lombok.ToString;
 public class CarParkDistanceDTO {
 	
 	String id;
+	
+	String address;
 
 	Double latitude;
 	
@@ -25,10 +27,11 @@ public class CarParkDistanceDTO {
 	
 	Double distance;
 
-	public CarParkDistanceDTO(String id, Double latitude, Double longitude, Integer lotsAvailable, Integer totalLots,
+	public CarParkDistanceDTO(String id, String address, Double latitude, Double longitude, Integer lotsAvailable, Integer totalLots,
 			Double distance) {
 		super();
 		this.id = id;
+		this.address = address;
 		this.latitude = latitude;
 		this.longitude = longitude;
 		this.totalLots = totalLots;

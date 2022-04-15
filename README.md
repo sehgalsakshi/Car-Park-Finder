@@ -12,7 +12,7 @@ More info about dataset can be found here
 https://data.gov.sg/dataset/hdb-carpark-information
 
 Framework Chosen : <b>Spring Boot</b>
-
+Server : <b>Embedded Tomcat</b>
 ## <b>Application Flow/ APIs </b>
 
 1. <b>Upload CarParkInfo using CSV</b> (/csv/upload)

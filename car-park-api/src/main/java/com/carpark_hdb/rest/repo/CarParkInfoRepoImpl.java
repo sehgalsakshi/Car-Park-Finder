@@ -20,7 +20,8 @@ class CarParkInfoRepoImpl implements CustomCarParkInfoRepo {
 			+ " * cos( radians( :longitude ) - radians(info.yCoord) ) + sin( radians(info.xCoord) ) * sin( radians( :latitude ) ) ) ),2) "
 			+ " as distance ";	
 
-	String FIND_AVAILABLE_CAR_PARKS_SORTED_BY_DISTANCE = " Select NEW com.carpark_hdb.rest.dto.CarParkDistanceDTO(info.id, info.xCoord, info.yCoord, avail.lotsAvailable,avail.totalLots, "
+	String FIND_AVAILABLE_CAR_PARKS_SORTED_BY_DISTANCE = " Select NEW com.carpark_hdb.rest.dto.CarParkDistanceDTO(info.id, "
+			+ " info.address, info.xCoord, info.yCoord, avail.lotsAvailable,avail.totalLots, "
 			+ DISTANCE_CALCULATION+") "
 					+ " from CarParkInfoEntity info left join info.carParkAvailability avail"
 			+ " where avail.id = info.id and "
